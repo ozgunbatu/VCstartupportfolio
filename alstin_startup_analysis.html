@@ -1,0 +1,1396 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alstin Capital - Startup Investment Analysis 2025</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #1a365d;
+            --primary-light: #2c5282;
+            --accent: #ed8936;
+            --accent-light: #fbd38d;
+            --bg-primary: #ffffff;
+            --bg-secondary: #f7fafc;
+            --bg-dark: #1a202c;
+            --text-primary: #2d3748;
+            --text-secondary: #4a5568;
+            --text-muted: #718096;
+            --border: #e2e8f0;
+            --success: #38a169;
+            --warning: #dd6b20;
+            --danger: #e53e3e;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--text-primary);
+            background: linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header Section */
+        .hero {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+            color: white;
+            padding: 80px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="grid" width="100" height="100" patternUnits="userSpaceOnUse"><path d="M 100 0 L 0 0 0 100" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="1"/></pattern></defs><rect width="100%" height="100%" fill="url(%23grid)"/></svg>');
+            opacity: 0.3;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
+            font-weight: 900;
+            margin-bottom: 1rem;
+            letter-spacing: -0.02em;
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        .hero .subtitle {
+            font-size: 1.5rem;
+            opacity: 0.9;
+            margin-bottom: 2rem;
+            animation: fadeInUp 0.8s ease-out 0.2s backwards;
+        }
+
+        .meta-info {
+            display: inline-grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 2rem;
+            border-radius: 12px;
+            margin-top: 2rem;
+            animation: fadeInUp 0.8s ease-out 0.4s backwards;
+        }
+
+        .meta-item {
+            text-align: left;
+        }
+
+        .meta-label {
+            font-size: 0.875rem;
+            opacity: 0.8;
+            margin-bottom: 0.25rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .meta-value {
+            font-size: 1.125rem;
+            font-weight: 600;
+        }
+
+        /* Navigation */
+        .nav {
+            background: white;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-content {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            padding: 1rem 0;
+        }
+
+        .nav a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-weight: 500;
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            transition: all 0.3s ease;
+        }
+
+        .nav a:hover {
+            background: var(--bg-secondary);
+            color: var(--primary);
+        }
+
+        /* Content Section */
+        .content {
+            padding: 4rem 0;
+        }
+
+        .section {
+            background: white;
+            border-radius: 16px;
+            padding: 3rem;
+            margin-bottom: 3rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            animation: fadeIn 0.6s ease-out;
+        }
+
+        h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 3px solid var(--accent);
+        }
+
+        h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.875rem;
+            color: var(--primary-light);
+            margin: 2rem 0 1rem;
+        }
+
+        h4 {
+            font-size: 1.25rem;
+            color: var(--text-primary);
+            margin: 1.5rem 0 0.75rem;
+            font-weight: 600;
+        }
+
+        /* Startup Cards */
+        .startup-card {
+            background: linear-gradient(135deg, #f7fafc 0%, white 100%);
+            border-left: 4px solid var(--accent);
+            padding: 2.5rem;
+            margin-bottom: 3rem;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .startup-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
+        }
+
+        .startup-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 1.5rem;
+        }
+
+        .startup-rank {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            font-weight: 900;
+            color: var(--accent);
+            line-height: 1;
+        }
+
+        .startup-title h3 {
+            margin: 0;
+            font-size: 2rem;
+        }
+
+        .startup-tagline {
+            color: var(--text-secondary);
+            font-size: 1.125rem;
+            margin-top: 0.25rem;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1rem;
+            background: var(--bg-secondary);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 1.5rem 0;
+        }
+
+        .info-item {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .info-label {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--text-muted);
+            margin-bottom: 0.25rem;
+            font-weight: 600;
+        }
+
+        .info-value {
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        /* Features List */
+        .features-list {
+            list-style: none;
+            margin: 1rem 0;
+        }
+
+        .features-list li {
+            padding: 0.75rem 0;
+            padding-left: 2rem;
+            position: relative;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .features-list li:last-child {
+            border-bottom: none;
+        }
+
+        .features-list li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+            font-weight: bold;
+        }
+
+        /* Reasons Table */
+        .reasons-table {
+            width: 100%;
+            margin: 2rem 0;
+            border-collapse: separate;
+            border-spacing: 0;
+        }
+
+        .reasons-table th {
+            background: var(--primary);
+            color: white;
+            padding: 1rem;
+            text-align: left;
+            font-weight: 600;
+        }
+
+        .reasons-table th:first-child {
+            border-top-left-radius: 8px;
+        }
+
+        .reasons-table th:last-child {
+            border-top-right-radius: 8px;
+        }
+
+        .reasons-table td {
+            padding: 1rem;
+            border-bottom: 1px solid var(--border);
+            vertical-align: top;
+        }
+
+        .reasons-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .reasons-table tr:nth-child(even) {
+            background: var(--bg-secondary);
+        }
+
+        .reason-title {
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+
+        /* Metrics */
+        .metrics {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .metric-card {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+            color: white;
+            padding: 1.5rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .metric-label {
+            font-size: 0.875rem;
+            opacity: 0.9;
+            margin-bottom: 0.5rem;
+        }
+
+        .metric-value {
+            font-size: 2rem;
+            font-weight: 700;
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        /* Tags */
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin: 1rem 0;
+        }
+
+        .tag {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            background: var(--accent-light);
+            color: var(--warning);
+            border-radius: 20px;
+            font-size: 0.875rem;
+            font-weight: 600;
+        }
+
+        .tag.success {
+            background: #c6f6d5;
+            color: var(--success);
+        }
+
+        .tag.warning {
+            background: #feebc8;
+            color: var(--warning);
+        }
+
+        /* Recommendation Badge */
+        .recommendation {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            background: var(--success);
+            color: white;
+            font-weight: 700;
+            border-radius: 8px;
+            font-size: 1.125rem;
+            margin: 1rem 0;
+            box-shadow: 0 4px 6px rgba(56, 161, 105, 0.3);
+        }
+
+        .recommendation.watch {
+            background: var(--warning);
+            box-shadow: 0 4px 6px rgba(221, 107, 32, 0.3);
+        }
+
+        .recommendation.exploratory {
+            background: var(--text-muted);
+            box-shadow: 0 4px 6px rgba(113, 128, 150, 0.3);
+        }
+
+        /* Data Sources */
+        .sources {
+            background: #fef5e7;
+            border-left: 4px solid var(--accent);
+            padding: 2rem;
+            border-radius: 8px;
+            margin-top: 3rem;
+        }
+
+        .sources h4 {
+            color: var(--warning);
+            margin-top: 0;
+        }
+
+        .sources ul {
+            list-style: none;
+            margin-top: 1rem;
+        }
+
+        .sources li {
+            padding: 0.5rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .sources li::before {
+            content: '📊';
+            position: absolute;
+            left: 0;
+        }
+
+        .sources a {
+            color: var(--primary);
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+            transition: border-color 0.3s ease;
+        }
+
+        .sources a:hover {
+            border-bottom-color: var(--primary);
+        }
+
+        /* Code blocks */
+        code {
+            background: var(--bg-secondary);
+            padding: 0.2rem 0.5rem;
+            border-radius: 4px;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.875rem;
+            color: var(--danger);
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--bg-dark);
+            color: white;
+            padding: 3rem 0;
+            text-align: center;
+            margin-top: 4rem;
+        }
+
+        .footer-content {
+            opacity: 0.8;
+        }
+
+        .footer-logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero .subtitle {
+                font-size: 1.25rem;
+            }
+
+            .meta-info {
+                grid-template-columns: 1fr;
+            }
+
+            h2 {
+                font-size: 2rem;
+            }
+
+            .section {
+                padding: 2rem;
+            }
+
+            .startup-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .nav-content {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+        }
+
+        /* Print Styles */
+        @media print {
+            .nav, .footer {
+                display: none;
+            }
+
+            .section {
+                page-break-inside: avoid;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <div class="hero">
+        <div class="container hero-content">
+            <h1>Welches Start-Up sollten wir uns ansehen?</h1>
+            <p class="subtitle">Strategische Startup-Analyse für Alstin Capital</p>
+            <div class="meta-info">
+                <div class="meta-item">
+                    <div class="meta-label">Datum</div>
+                    <div class="meta-value">10. Februar 2026</div>
+                </div>
+                <div class="meta-item">
+                    <div class="meta-label">Fokus</div>
+                    <div class="meta-value">B2B SaaS · Seed/Series A</div>
+                </div>
+                <div class="meta-item">
+                    <div class="meta-label">Region</div>
+                    <div class="meta-value">Europa</div>
+                </div>
+                <div class="meta-item">
+                    <div class="meta-label">Investment Thesis</div>
+                    <div class="meta-value">EUR 2-8M Initial Tickets</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="container nav-content">
+            <a href="#executive-summary">Executive Summary</a>
+            <a href="#monite">Monite</a>
+            <a href="#pennylane">Pennylane</a>
+            <a href="#pigment">Pigment</a>
+            <a href="#trends">Market Trends</a>
+            <a href="#recommendation">Empfehlung</a>
+            <a href="#sources">Quellen</a>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container content">
+        
+        <!-- Executive Summary -->
+        <section id="executive-summary" class="section">
+            <h2>Executive Summary</h2>
+            <p style="font-size: 1.125rem; line-height: 1.8; margin-bottom: 2rem;">
+                Basierend auf einer umfassenden Marktanalyse und unter Berücksichtigung von Alstin Capitals 
+                Investitionsthese präsentieren wir drei hochpotenzielle B2B-SaaS-Startups, die perfekt zum Portfolio passen. 
+                Die Auswahl fokussiert sich auf Unternehmen in den Wachstumssektoren <strong>Embedded Finance</strong>, 
+                <strong>Fintech-Automation</strong> und <strong>Enterprise Planning Software</strong> – allesamt Bereiche mit starkem 
+                Marktmomentum und klarem Product-Market-Fit.
+            </p>
+
+            <h3>Auswahlkriterien</h3>
+            <table class="reasons-table">
+                <thead>
+                    <tr>
+                        <th>Kriterium</th>
+                        <th>Begründung</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Seed/Series A Stage</strong></td>
+                        <td>Passt exakt zu Alstin's EUR 2-8M Ticket-Größe</td>
+                    </tr>
+                    <tr>
+                        <td><strong>B2B Software Fokus</strong></td>
+                        <td>Kern-Kompetenzbereich von Alstin Capital</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Europäischer Markt</strong></td>
+                        <td>Geografischer Sweet-Spot mit lokaler Expertise</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Starke Founder</strong></td>
+                        <td>Erfahrene Teams mit Exits oder Tech-Background</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Proven Traction</strong></td>
+                        <td>ARR-Wachstum, zahlende Kunden, klare Unit Economics</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Startup #1: Monite -->
+        <section id="monite" class="startup-card">
+            <div class="startup-header">
+                <div>
+                    <div class="startup-rank">🥇 #1</div>
+                    <div class="startup-title">
+                        <h3>Monite</h3>
+                        <p class="startup-tagline">Embedded Finance Infrastructure für B2B Plattformen</p>
+                    </div>
+                </div>
+                <div class="recommendation">STRONG BUY</div>
+            </div>
+
+            <div class="info-grid">
+                <div class="info-item">
+                    <span class="info-label">Gegründet</span>
+                    <span class="info-value">2020</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">Hauptsitz</span>
+                    <span class="info-value">Berlin, DE</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">Funding Stage</span>
+                    <span class="info-value">Seed (€6M)</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">Lead Investors</span>
+                    <span class="info-value">Third Prime, 3VC</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">Team Size</span>
+                    <span class="info-value">50+ Mitarbeiter</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">Expansion</span>
+                    <span class="info-value">USA (ab 2024)</span>
+                </div>
+            </div>
+
+            <h4>Was macht Monite?</h4>
+            <p style="margin-bottom: 1.5rem;">
+                Monite bietet eine <strong>API-first Embedded Finance Plattform</strong>, die es B2B-SaaS-Unternehmen, 
+                Neobanken und Payment-Plattformen ermöglicht, native Rechnungsstellung (AR), 
+                Kreditorenbuchhaltung (AP) und Zahlungsabwicklung in ihre Produkte zu integrieren. 
+                Die Lösung eliminiert die Notwendigkeit, diese Funktionalität selbst zu entwickeln – 
+                ein Prozess, der traditionell 12+ Monate dauert.
+            </p>
+
+            <h4>Kernprodukte</h4>
+            <ul class="features-list">
+                <li><strong>AI-Powered Invoicing (AR):</strong> Automatisierte Rechnungserstellung mit OCR und Datenextraktion</li>
+                <li><strong>Bill Pay Automation (AP):</strong> Intelligente Kreditorenbuchhaltung mit Approval-Workflows</li>
+                <li><strong>Payment Rails Integration:</strong> Multi-Provider Payment-Infrastruktur (SEPA, Cards, etc.)</li>
+                <li><strong>iFrame Solution:</strong> Integration in unter 2 Stunden (neu gelauncht Februar 2025)</li>
+            </ul>
+
+            <h4>Warum Monite für Alstin Capital?</h4>
+            <table class="reasons-table">
+                <thead>
+                    <tr>
+                        <th style="width: 30%;">Faktor</th>
+                        <th>Begründung</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><div class="reason-title">1. Riesiger TAM</div></td>
+                        <td>Der Embedded Finance Markt für SMBs wird 2025 auf <strong>$124 Milliarden</strong> geschätzt. 
+                        Monite bedient genau diesen Sweet-Spot zwischen Vertical SaaS und Fintech.</td>
+                    </tr>
+                    <tr>
+                        <td><div class="reason-title">2. Perfect Timing</div></td>
+                        <td>B2B-Fintech sieht 2025 massive Wachstumsraten (41% aller Fintech-Investments). 
+                        Regulatorische Trends (PSD2, Open Banking) treiben Adoption.</td>
+                    </tr>
+                    <tr>
+                        <td><div class="reason-title">3. Proven Traction</div></td>
+                        <td>Expansion in US-Markt (2024), zahlende Enterprise-Kunden, schnelle Integration 
+                        (2 Stunden vs. 12 Monate In-House-Entwicklung).</td>
+                    </tr>
+                    <tr>
+                        <td><div class="reason-title">4. Starkes Team</div></td>
+                        <td>CEO Ivan Maryasin: Ex-Atom Bank, Marqeta & Mollie Leadership. 
+                        Erfahrenes Fintech-Team mit mehreren Exits.</td>
+                    </tr>
+                    <tr>
+                        <td><div class="reason-title">5. Alstin Fit</div></td>
+                        <td>Typisches Alstin-Portfolio-Pattern: B2B SaaS, Seed-Stage, europäisch, 
+                        skalierbar, Sales & Marketing Support-Bedarf.</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h4>Key Metrics & Momentum</h4>
+            <div class="tags">
+                <span class="tag success">Seed Stage</span>
+                <span class="tag success">€6M Raised</span>
+                <span class="tag">Berlin-Based</span>
+                <span class="tag">US Expansion</span>
+                <span class="tag success">API-First</span>
+                <span class="tag">FinTech</span>
+            </div>
+            <ul class="features-list">
+                <li><strong>Revenue Model:</strong> Transaktionsgebühren + SaaS-Subscriptions (2-5x Revenue/User möglich)</li>
+                <li><strong>Target Customers:</strong> Vertical SaaS Platforms, Neobanks, Payment Companies</li>
+                <li><strong>Geographic Expansion:</strong> Europa → USA (seit 2024 aktiv)</li>
+                <li><strong>Product Velocity:</strong> Neue iFrame-Lösung (Feb 2025) zeigt schnelle Innovation</li>
+            </ul>
+
+            <h4>Risiken & Mitigation</h4>
+            <p><strong>Wettbewerb:</strong> Embedded Finance ist heiß umkämpft (Stripe, Plaid, etc.). 
+            <em>Mitigation: Monite's europäischer Fokus, Multi-Rail-Ansatz und SMB-Spezialisierung schaffen Differenzierung.</em></p>
+            <p><strong>Regulatorik:</strong> PSD2, GDPR-Compliance erforderlich. 
+            <em>Mitigation: Team hat Deep Fintech-Compliance-Expertise, bereits zertifiziert.</em></p>
+        </section>
+
+        <!-- Startup #2: Pennylane -->
+        <section id="pennylane" class="startup-card">
+            <div class="startup-header">
+                <div>
+                    <div class="startup-rank">🥈 #2</div>
+                    <div class="startup-title">
+                        <h3>Pennylane</h3>
+                        <p class="startup-tagline">All-in-One Accounting & Financial Management für SMEs</p>
+                    </div>
+                </div>
+                <div class="recommendation watch">WATCH LIST</div>
+            </div>
+
+            <div class="info-grid">
+                <div class="info-item">
+                    <span class="info-label">Gegründet</span>
+                    <span class="info-value">2020</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">Hauptsitz</span>
+                    <span class="info-value">Paris, FR</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">Funding Stage</span>
+                    <span class="info-value">Series E ($175M)</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">Valuation</span>
+                    <span class="info-value">$4.25B</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">Lead Investors</span>
+                    <span class="info-value">TCV, Blackstone</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">Team Size</span>
+                    <span class="info-value">800+ (Ziel 2025)</span>
+                </div>
+            </div>
+
+            <div style="background: #fff5f5; border-left: 4px solid #fc8181; padding: 1rem; border-radius: 8px; margin: 1.5rem 0;">
+                <p style="margin: 0; color: #c53030;"><strong>⚠️ Hinweis:</strong> Pennylane ist bereits Unicorn (Series E). 
+                Das Unternehmen zeigt jedoch exemplarisch die Wachstumsdynamik im Accounting-Software-Sektor, 
+                die für frühere Stage-Competitors relevant ist.</p>
+            </div>
+
+            <h4>Was macht Pennylane?</h4>
+            <p style="margin-bottom: 1.5rem;">
+                Pennylane ist eine <strong>Cloud-basierte Buchhaltungs- und Financial-Management-Plattform</strong>, 
+                die speziell für SMEs und ihre Steuerberater entwickelt wurde. Die Plattform konsolidiert 
+                alle Finanzfunktionen – von Buchhaltung über Rechnungsstellung bis hin zu Zahlungsabwicklung 
+                und Cash Management – in einem gemeinsamen Workspace, der Zusammenarbeit zwischen Unternehmen 
+                und ihren Accountants ermöglicht.
+            </p>
+
+            <h4>Kernfunktionalitäten</h4>
+            <ul class="features-list">
+                <li><strong>Collaborative Accounting:</strong> Shared Workspace für Businesses + Accountants</li>
+                <li><strong>Embedded Banking:</strong> 20% der Kunden nutzen Pennylane als Geschäftskonto</li>
+                <li><strong>AI Copilot:</strong> Generative AI für automatisierte Buchhaltung und Advisory</li>
+                <li><strong>Electronic Invoicing:</strong> Compliance-Ready für EU-Mandate (ab 2026)</li>
+                <li><strong>Payment & Cash Management:</strong> Integrierte Zahlungsabwicklung</li>
+            </ul>
+
+            <h4>Warum Pennylane interessant ist</h4>
+            <table class="reasons-table">
+                <thead>
+                    <tr>
+                        <th style="width: 30%;">Faktor</th>
+                        <th>Begründung</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><div class="reason-title">Market Leader</div></td>
+                        <td>800.000+ Nutzer, 4.500+ Buchhaltungsfirmen. Verdopplung der Valuation in 7 Monaten 
+                        (€2.2B → $4.25B) zeigt extreme Traktion.</td>
+                    </tr>
+                    <tr>
+                        <td><div class="reason-title">Regulatory Tailwind</div></td>
+                        <td>EU-weite E-Invoicing-Mandate ab 2026 schaffen Zwang zur Digitalisierung. 
+                        Pennylane ist First-Mover in Compliance-Features.</td>
+                    </tr>
+                    <tr>
+                        <td><div class="reason-title">International Expansion</div></td>
+                        <td>Deutschland-Launch Nov 2025 (100 Mitarbeiter), weitere Märkte geplant 
+                        (Polen, Spanien, Belgien). Blueprint für europäische Skalierung.</td>
+                    </tr>
+                    <tr>
+                        <td><div class="reason-title">Vertical Integration</div></td>
+                        <td>Von reiner Accounting-Software zu Financial Super-App (Banking, Payments, Lending). 
+                        Ähnlich wie Qonto, aber mit Accountant-First-Ansatz.</td>
+                    </tr>
+                    <tr>
+                        <td><div class="reason-title">Alstin Portfolio Fit</div></td>
+                        <td><strong>Competitor-Analyse:</strong> Frühere Stage-Competitors in diesem Segment könnten 
+                        attraktive Seed/Series A Targets sein (z.B. deutsche/polnische Pennylane-Klone).</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="metrics">
+                <div class="metric-card">
+                    <div class="metric-label">Nutzer</div>
+                    <div class="metric-value">800K+</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-label">Accountants</div>
+                    <div class="metric-value">4.5K+</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-label">ARR Target</div>
+                    <div class="metric-value">€100M+</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-label">Revenue Growth</div>
+                    <div class="metric-value">600%</div>
+                </div>
+            </div>
+
+            <h4>Learnings für Alstin</h4>
+            <p style="background: #e6fffa; padding: 1.5rem; border-radius: 8px; border-left: 4px solid #38b2ac;">
+                Pennylane demonstriert, dass <strong>Accounting Software mit Vertical Integration</strong> 
+                extrem skalierbar ist. Alstin sollte nach Seed/Series A Unternehmen suchen, die 
+                ähnliche Plays in unterversorgten EU-Märkten (Polen, Spanien, Nordics) verfolgen. 
+                Die Kombination aus <strong>Regulatory Compliance + Embedded Finance + AI Automation</strong> 
+                schafft starke Defensibility.
+            </p>
+        </section>
+
+        <!-- Startup #3: Pigment -->
+        <section id="pigment" class="startup-card">
+            <div class="startup-header">
+                <div>
+                    <div class="startup-rank">🥉 #3</div>
+                    <div class="startup-title">
+                        <h3>Pigment</h3>
+                        <p class="startup-tagline">AI-Powered Business Planning & FP&A Platform</p>
+                    </div>
+                </div>
+                <div class="recommendation exploratory">EXPLORATORY</div>
+            </div>
+
+            <div class="info-grid">
+                <div class="info-item">
+                    <span class="info-label">Gegründet</span>
+                    <span class="info-value">2019</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">Hauptsitz</span>
+                    <span class="info-value">Paris, FR</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">Funding Stage</span>
+                    <span class="info-value">Series D ($145M)</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">Valuation</span>
+                    <span class="info-value">$1.0B+</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">Lead Investor</span>
+                    <span class="info-value">ICONIQ Growth</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">Team Size</span>
+                    <span class="info-value">500-1000</span>
+                </div>
+            </div>
+
+            <div style="background: #fff5f5; border-left: 4px solid #fc8181; padding: 1rem; border-radius: 8px; margin: 1.5rem 0;">
+                <p style="margin: 0; color: #c53030;"><strong>⚠️ Hinweis:</strong> Wie Pennylane ist Pigment bereits spät-stage (Series D, Unicorn). 
+                Das Unternehmen illustriert jedoch die massive Opportunity im Enterprise Planning-Sektor, 
+                die für frühere Stage-Plays relevant ist.</p>
+            </div>
+
+            <h4>Was macht Pigment?</h4>
+            <p style="margin-bottom: 1.5rem;">
+                Pigment ist eine <strong>moderne Business Planning & FP&A Plattform</strong>, die Excel und 
+                Legacy-Enterprise-Software (Oracle, SAP) für Financial Planning, Budgeting und 
+                Forecasting ersetzt. Die Lösung richtet sich an CFOs und Finance-Teams in Mid-Market 
+                und Enterprise-Unternehmen und ermöglicht Echtzeit-Kollaboration, Scenario-Planning 
+                und AI-gestützte Insights.
+            </p>
+
+            <h4>Kernfunktionalitäten</h4>
+            <ul class="features-list">
+                <li><strong>Integrated Business Planning:</strong> Finance, HR, Sales, Supply Chain – One Platform</li>
+                <li><strong>Real-Time Data Sync:</strong> Connectors zu ERP, HRIS, Data Lakes (Snowflake, BigQuery)</li>
+                <li><strong>Scenario Modeling:</strong> What-If-Analysen ohne Excel-Chaos</li>
+                <li><strong>Pigment AI:</strong> Natural Language Queries, Automated Insights, Predictive Analytics</li>
+                <li><strong>Collaboration Layer:</strong> Cross-Team-Visibility für Finance, Sales, HR</li>
+            </ul>
+
+            <h4>Warum Pigment relevant ist</h4>
+            <table class="reasons-table">
+                <thead>
+                    <tr>
+                        <th style="width: 30%;">Faktor</th>
+                        <th>Begründung</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><div class="reason-title">Exceptional Growth</div></td>
+                        <td>3x Revenue Growth (2023), 4x ARR Growth in USA. Top 5% schnellste wachsende 
+                        SaaS-Unternehmen aller Zeiten (IVP Benchmark).</td>
+                    </tr>
+                    <tr>
+                        <td><div class="reason-title">Blue-Chip Customers</div></td>
+                        <td>Unilever, Datadog, Kayak, Merck, Figma, Miro, Klarna. 50% US-basiert trotz 
+                        französischer Gründung.</td>
+                    </tr>
+                    <tr>
+                        <td><div class="reason-title">Product Moat</div></td>
+                        <td>Excel-Alternative mit Enterprise-Grade Performance. Handling von Millionen 
+                        Datenpunkten + komplexen Kalkulationen in Echtzeit.</td>
+                    </tr>
+                    <tr>
+                        <td><div class="reason-title">AI-Native Platform</div></td>
+                        <td>Partnerschaft mit OpenAI (GPT-4 API). AI Copilot für Accountants. 
+                        Früher AI-Adoption schafft Switching Costs.</td>
+                    </tr>
+                    <tr>
+                        <td><div class="reason-title">Alstin Angle</div></td>
+                        <td>Seed/Series A Competitors im FP&A-Segment (z.B. regionale Plays in DACH/Nordics) 
+                        könnten von Pigment's Success Story profitieren.</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="metrics">
+                <div class="metric-card">
+                    <div class="metric-label">Revenue Growth</div>
+                    <div class="metric-value">3x YoY</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-label">Valuation</div>
+                    <div class="metric-value">$1B+</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-label">ARR Growth (US)</div>
+                    <div class="metric-value">4x</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-label">Multi-Dept Usage</div>
+                    <div class="metric-value">90%</div>
+                </div>
+            </div>
+
+            <h4>Sector Insights für Alstin</h4>
+            <p style="background: #ebf8ff; padding: 1.5rem; border-radius: 8px; border-left: 4px solid #4299e1;">
+                Der <strong>FP&A/Business Planning Markt</strong> ist reif für Disruption. Legacy-Tools 
+                (Excel, Adaptive Insights, Anaplan) verlieren gegen moderne, AI-native Lösungen. 
+                Alstin sollte nach <strong>vertikalen FP&A-Plays</strong> suchen (z.B. spezialisiert auf 
+                E-Commerce, SaaS-Companies, Manufacturing) oder regionale Pigment-Alternativen in 
+                unterversorgten EU-Märkten.
+            </p>
+        </section>
+
+        <!-- Market Trends -->
+        <section id="trends" class="section">
+            <h2>Markttrends & Sektoranalyse 2025</h2>
+
+            <h3>1. Embedded Finance Boom (TAM: $124B by 2025)</h3>
+            <p style="font-size: 1.05rem; line-height: 1.8; margin-bottom: 1.5rem;">
+                Der Embedded Finance Sektor explodiert. B2B-Plattformen integrieren zunehmend 
+                Finanzdienstleistungen (Payments, Lending, Insurance) direkt in ihre Produkte. 
+                Treiber: API-Infrastruktur-Reife, Open Banking (PSD2), SMB-Nachfrage nach 
+                All-in-One-Lösungen. <strong>41% aller Fintech-Investments gehen 2025 in B2B Fintech.</strong>
+            </p>
+
+            <table class="reasons-table">
+                <thead>
+                    <tr>
+                        <th>Trend</th>
+                        <th>Impact</th>
+                        <th>Relevanz für Alstin</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>BNPL for B2B</strong></td>
+                        <td>Expansion von Buy-Now-Pay-Later in B2B-Kontext</td>
+                        <td><span class="tag success">High</span> SMBs brauchen Working Capital Solutions</td>
+                    </tr>
+                    <tr>
+                        <td><strong>AI-Powered Underwriting</strong></td>
+                        <td>Echtzeit-Kreditentscheidungen durch ML</td>
+                        <td><span class="tag warning">Medium</span> Differentiator für Fintech-Startups</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Vertical SaaS + Finance</strong></td>
+                        <td>Branchenspezifische Software + Embedded Payments</td>
+                        <td><span class="tag success">Very High</span> Core Alstin Thesis</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Regulatory Clarity</strong></td>
+                        <td>MiCA (EU), GENIUS Act (US) schaffen Standards</td>
+                        <td><span class="tag success">High</span> Reduziert Compliance-Risiken</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>2. AI-Native B2B SaaS (44% charge for AI)</h3>
+            <p style="font-size: 1.05rem; line-height: 1.8; margin-bottom: 1.5rem;">
+                Generative AI ist nicht mehr Optional – es ist Kern-Differentiator. 
+                Erfolgreiche SaaS-Unternehmen integrieren AI tief in ihre Workflows (nicht als Add-On). 
+                Beispiele: Pigment AI Copilot, Pennylane's Automated Accounting, Monite's OCR. 
+                <strong>Usage-Based Pricing für AI-Features wird Standard.</strong>
+            </p>
+
+            <h3>3. European SaaS Sovereignty Movement</h3>
+            <p style="font-size: 1.05rem; line-height: 1.8; margin-bottom: 1.5rem;">
+                EU-Regulatorik (GDPR, Data Residency, AI Act) treibt Nachfrage nach europäischen 
+                Software-Anbietern. Unternehmen präferieren zunehmend lokale Lösungen gegenüber 
+                US-Tech-Giants. <strong>Pennylane, Pigment und andere French Tech Unicorns profitieren.</strong> 
+                Alstin Capital's DACH/EU-Fokus ist strategischer Vorteil.
+            </p>
+
+            <h3>4. Vertical SaaS Dominance</h3>
+            <p style="font-size: 1.05rem; line-height: 1.8;">
+                Horizontal SaaS verliert gegen vertikale Lösungen. Branchenspezifische Software 
+                (z.B. für Restaurants, E-Commerce, Manufacturing) wächst schneller, weil sie 
+                tiefere Integration, bessere Compliance und höhere Switching Costs bietet. 
+                <strong>HealthTech Vertical SaaS: 19-22% CAGR bis 2030.</strong>
+            </p>
+        </section>
+
+        <!-- Investment Recommendation -->
+        <section id="recommendation" class="section">
+            <h2>Investitionsempfehlung</h2>
+
+            <h3>Priorisierung für Alstin Capital</h3>
+            <table class="reasons-table">
+                <thead>
+                    <tr>
+                        <th>Rang</th>
+                        <th>Startup</th>
+                        <th>Stage Fit</th>
+                        <th>Timing</th>
+                        <th>Empfehlung</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr style="background: #f0fff4;">
+                        <td style="text-align: center; font-size: 1.5rem;">🥇 #1</td>
+                        <td><strong>Monite</strong></td>
+                        <td>✅ Perfect<br/>(Seed, €6M)</td>
+                        <td>✅ Ideal<br/>(Pre-Series A)</td>
+                        <td><strong style="color: #38a169;">STRONG BUY</strong><br/>Sofort evaluieren für Alstin III</td>
+                    </tr>
+                    <tr style="background: #fffaf0;">
+                        <td style="text-align: center; font-size: 1.5rem;">🥈 #2</td>
+                        <td><strong>Pennylane-Competitors</strong></td>
+                        <td>✅ Good<br/>(Suche Seed/A)</td>
+                        <td>✅ Good<br/>(Sektor hot)</td>
+                        <td><strong style="color: #dd6b20;">WATCH LIST</strong><br/>Regionale Accounting-Plays identifizieren</td>
+                    </tr>
+                    <tr style="background: #fef2f2;">
+                        <td style="text-align: center; font-size: 1.5rem;">🥉 #3</td>
+                        <td><strong>Pigment-Competitors</strong></td>
+                        <td>⚠️ Mixed<br/>(FP&A schwer)</td>
+                        <td>✅ Good<br/>(AI-Tailwind)</td>
+                        <td><strong style="color: #718096;">EXPLORATORY</strong><br/>Vertikale FP&A-Nischen evaluieren</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>Detaillierte Begründung</h3>
+            
+            <div style="background: #f0fff4; padding: 2rem; border-radius: 12px; border-left: 4px solid #38a169; margin: 2rem 0;">
+                <h4 style="color: #38a169; margin-top: 0;">Monite (Empfehlung: Strong Buy)</h4>
+                <ul class="features-list">
+                    <li><strong>Stage-Fit:</strong> Seed-Stage, perfekt für Alstin's EUR 2-8M Tickets</li>
+                    <li><strong>Sektor:</strong> Embedded Finance ist Top-Wachstumssegment 2025</li>
+                    <li><strong>Timing:</strong> Pre-Series A, wahrscheinlich Q2/Q3 2025 fundraising</li>
+                    <li><strong>Team:</strong> Erfahrene Fintech-Gründer mit Exits</li>
+                    <li><strong>Alstin Value-Add:</strong> Sales/Marketing Scaling, DACH-Expansion Support</li>
+                    <li><strong>Risk:</strong> Wettbewerb – aber europäischer Fokus schafft Differenzierung</li>
+                </ul>
+                <p style="margin-top: 1rem; font-weight: 600;">
+                    ➡️ <strong>Next Steps:</strong> Sofortiges Founder-Meeting arrangieren, Due Diligence einleiten, 
+                    Co-Investment mit anderen Portfolio-Synergien prüfen (z.B. Pliant, Deskbird).
+                </p>
+            </div>
+
+            <div style="background: #fffaf0; padding: 2rem; border-radius: 12px; border-left: 4px solid #dd6b20; margin: 2rem 0;">
+                <h4 style="color: #dd6b20; margin-top: 0;">Pennylane-Inspired Regional Plays (Empfehlung: Watch List)</h4>
+                <p>
+                    Pennylane zeigt, dass Accounting-Software mit Embedded Finance massiv skalierbar ist. 
+                    Alstin sollte nach <strong>Seed/Series A Competitors</strong> in unterversorgten EU-Märkten suchen:
+                </p>
+                <ul class="features-list">
+                    <li><strong>Deutschland:</strong> Accounting-Tools für Steuerberater (z.B. DATEV-Alternativen)</li>
+                    <li><strong>Polen:</strong> SMB-Finanzmanagement + Compliance</li>
+                    <li><strong>Nordics:</strong> Regional Accounting mit Embedded Banking</li>
+                </ul>
+                <p style="margin-top: 1rem;">
+                    <strong>Screening-Kriterien:</strong> Accountant-First Go-To-Market, Embedded Finance-Integration, 
+                    AI/Automation-Features, <€10M Funding, >€500K ARR.
+                </p>
+            </div>
+
+            <div style="background: #f7fafc; padding: 2rem; border-radius: 12px; border-left: 4px solid #718096; margin: 2rem 0;">
+                <h4 style="color: #718096; margin-top: 0;">Vertical FP&A Plays à la Pigment (Empfehlung: Exploratory)</h4>
+                <p>
+                    FP&A-Markt ist riesig, aber hart umkämpft (Anaplan, Workday Adaptive). 
+                    Vertikale Nischen könnten attraktiv sein:
+                </p>
+                <ul class="features-list">
+                    <li>FP&A für E-Commerce/D2C Brands</li>
+                    <li>Planning Software für SaaS-Companies (ARR-Forecasting, Cohort-Analysis)</li>
+                    <li>Supply Chain Planning für Manufacturing</li>
+                </ul>
+                <p style="margin-top: 1rem; color: #c53030;">
+                    <strong>⚠️ Vorsicht:</strong> FP&A erfordert lange Sales Cycles und Enterprise-Sales-Expertise. 
+                    Nur wenn Founders proven Track Record in Enterprise Software haben.
+                </p>
+            </div>
+
+            <h3>Zusammenfassung & Next Steps</h3>
+            
+            <h4>Key Takeaways</h4>
+            <ol style="margin-left: 1.5rem; line-height: 2;">
+                <li><strong>Embedded Finance (Monite)</strong> ist das heißeste B2B-Segment 2025 – perfekter Timing für Alstin III Fund</li>
+                <li><strong>Regulatory Tailwinds</strong> (E-Invoicing, Open Banking, AI Act) schaffen massive Opportunities in Europa</li>
+                <li><strong>AI-Native SaaS</strong> ist nicht mehr Optional – Differentiatoren brauchen Deep AI Integration</li>
+                <li><strong>Vertical SaaS</strong> schlägt Horizontal SaaS in allen Metriken (CAC, LTV, Retention)</li>
+                <li><strong>European Sovereignty</strong> ist Wachstumstreiber für lokale SaaS-Champions</li>
+            </ol>
+
+            <h4>Empfohlene Aktionen</h4>
+            <table class="reasons-table">
+                <thead>
+                    <tr>
+                        <th>Aktion</th>
+                        <th>Zeitrahmen</th>
+                        <th>Owner</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Monite: Founder-Meeting & Due Diligence</td>
+                        <td><strong>ASAP (Februar 2026)</strong></td>
+                        <td>Deal Team</td>
+                    </tr>
+                    <tr>
+                        <td>Screening: Pennylane-Competitors in DACH/Poland</td>
+                        <td>Q1 2026</td>
+                        <td>Analyst</td>
+                    </tr>
+                    <tr>
+                        <td>Market Mapping: Vertical FP&A Startups</td>
+                        <td>Q1-Q2 2026</td>
+                        <td>Analyst</td>
+                    </tr>
+                    <tr>
+                        <td>Portfolio Synergy Check: Cross-Sell Opportunities</td>
+                        <td>Ongoing</td>
+                        <td>Portfolio Team</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div style="background: linear-gradient(135deg, #1a365d 0%, #2c5282 100%); color: white; padding: 2.5rem; border-radius: 12px; margin: 3rem 0;">
+                <h4 style="color: white; margin-top: 0;">Abschließende Gedanken</h4>
+                <p style="font-size: 1.05rem; line-height: 1.8; margin-bottom: 1rem;">
+                    Die drei analysierten Startups (bzw. deren Sektoren) repräsentieren die stärksten 
+                    Wachstumstrends im europäischen B2B-SaaS-Markt: <strong>Embedded Finance, Financial Automation 
+                    und AI-Powered Enterprise Software</strong>. Während Pennylane und Pigment bereits 
+                    zu spät für Alstin sind, zeigen sie die Skalierbarkeit dieser Märkte auf.
+                </p>
+                <p style="font-size: 1.05rem; line-height: 1.8; margin-bottom: 1rem;">
+                    <strong>Monite</strong> steht exemplarisch für genau die Art von Unternehmen, die Alstin Capital 
+                    erfolgreich zum Exit führen kann: technisch exzellent, starkes Team, riesiger TAM, 
+                    Seed-Stage mit bewiesener Traction, und perfekter Fit für Alstin's All-in-Support 
+                    in Sales, Marketing und Expansion.
+                </p>
+                <p style="font-size: 1.2rem; font-weight: 700; margin: 0; text-align: center;">
+                    ⚡ Die Zeit zu handeln ist <span style="color: #fbd38d;">JETZT</span> – bevor Sequoia oder Index zuschlagen.
+                </p>
+            </div>
+        </section>
+
+        <!-- Data Sources -->
+        <section id="sources" class="sources">
+            <h4>📊 Datenquellen & Recherche-Grundlagen</h4>
+            <p style="margin-bottom: 1rem; color: var(--text-secondary);">
+                Diese Analyse basiert auf umfassender Marktforschung aus folgenden Quellen:
+            </p>
+            
+            <h4 style="margin-top: 1.5rem;">Startup-Spezifische Quellen</h4>
+            <ul>
+                <li><strong>Monite:</strong> 
+                    <a href="https://monite.com" target="_blank">Monite Official Website</a>, 
+                    Crunchbase (Funding History), 
+                    TechCrunch Coverage (Seed Round €6M Announcement),
+                    LinkedIn (Team Size & Expansion Updates)
+                </li>
+                <li><strong>Pennylane:</strong> 
+                    <a href="https://pennylane.com" target="_blank">Pennylane Official Website</a>, 
+                    Series E Announcement (TCV/Blackstone Growth, Jan 2026),
+                    TechCrunch (Deutschland Launch Nov 2025),
+                    Financial Times (Unicorn Valuation Coverage)
+                </li>
+                <li><strong>Pigment:</strong> 
+                    <a href="https://pigment.com" target="_blank">Pigment Official Website</a>, 
+                    Series D Coverage (ICONIQ Growth Lead, April 2024),
+                    Forbes (Customer Case Studies: Unilever, Datadog),
+                    IVP Growth Benchmark Reports
+                </li>
+            </ul>
+
+            <h4 style="margin-top: 1.5rem;">Markt & Trend Research</h4>
+            <ul>
+                <li><strong>Embedded Finance:</strong> 
+                    McKinsey Report "Embedded Finance in B2B: $124B TAM by 2025",
+                    Bain Capital Ventures (B2B Fintech Trends 2025),
+                    CB Insights (41% Fintech Investment Share in B2B)
+                </li>
+                <li><strong>B2B SaaS Trends:</strong> 
+                    Bessemer Venture Partners (State of the Cloud Report 2025),
+                    KeyBanc Capital Markets (SaaS Survey Q4 2024),
+                    OpenView Partners (AI in SaaS: 44% Charge for AI Features)
+                </li>
+                <li><strong>European Tech:</strong> 
+                    Atomico (State of European Tech 2025),
+                    Sifted (French Tech Unicorns Analysis),
+                    Dealroom.co (European VC Funding Data)
+                </li>
+                <li><strong>Regulatory Trends:</strong> 
+                    EU Commission (E-Invoicing Mandate Timeline),
+                    PSD2 Implementation Reports,
+                    GDPR & Data Residency Impact Studies
+                </li>
+                <li><strong>Vertical SaaS:</strong> 
+                    Point Nine Capital (Vertical SaaS Thesis),
+                    Index Ventures (Market Map: Accounting & Financial Software),
+                    Gartner (FP&A Software Magic Quadrant 2025)
+                </li>
+            </ul>
+
+            <h4 style="margin-top: 1.5rem;">Alstin Capital Portfolio Research</h4>
+            <ul>
+                <li><a href="https://alstin.vc" target="_blank">Alstin Capital Official Website</a> (Portfolio Companies, Investment Thesis)</li>
+                <li>Crunchbase (Portfolio Analysis: etalytics, Climatiq, deskbird, Pliant)</li>
+                <li>LinkedIn (Team & Hiring Signals)</li>
+                <li>PR-Newswire (Investment Announcements)</li>
+            </ul>
+
+            <h4 style="margin-top: 1.5rem;">Methodologie</h4>
+            <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.6;">
+                Die Startup-Auswahl erfolgte nach folgenden Kriterien: (1) Alignment mit Alstin's B2B SaaS & Seed/Series A Thesis, 
+                (2) Markt-Timing basierend auf 2025 Investment-Trends, (3) Team Quality (Founder Track Record), 
+                (4) Proven Traction (ARR, Customer Growth), (5) Geografischer Fit (Europa-Fokus). 
+                <br/><br/>
+                Monite wurde als Top-Pick identifiziert aufgrund perfekter Stage-Fit, Sector Momentum (Embedded Finance) 
+                und Alstin's Value-Add-Potential (Sales/Marketing Scaling für DACH-Expansion).
+                <br/><br/>
+                Pennylane & Pigment dienen als <strong>Sector Proxies</strong> – ihre Success Stories validieren 
+                die Opportunity in Accounting Software bzw. FP&A, während frühere Stage-Competitors in diesen 
+                Sektoren für Alstin attraktiv sein könnten.
+            </p>
+
+            <h4 style="margin-top: 1.5rem;">Disclaimer</h4>
+            <p style="color: var(--text-muted); font-size: 0.875rem; font-style: italic;">
+                Diese Analyse wurde für Interview-Zwecke erstellt und basiert auf öffentlich verfügbaren Informationen 
+                (Stand: Februar 2026). Funding-Beträge, Valuations und Metriken wurden aus verschiedenen Quellen 
+                trianguliert und können von tatsächlichen Zahlen abweichen. Für Due Diligence sollten direkte 
+                Founder-Gespräche und Zugang zu Dataroom erfolgen.
+            </p>
+        </section>
+
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-logo">Alstin Capital Investment Analysis</div>
+            <p style="margin: 1rem 0;">Erstellt für Analyst Interview · Februar 2026</p>
+            <p style="font-size: 0.875rem; opacity: 0.7;">
+                Research & Analysis by Candidate · Powered by Market Intelligence
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scroll for navigation
+        document.querySelectorAll('.nav a').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Intersection Observer for fade-in animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.section, .startup-card').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
+            observer.observe(el);
+        });
+
+        // Active nav item highlighting on scroll
+        window.addEventListener('scroll', () => {
+            const sections = document.querySelectorAll('section[id]');
+            const scrollPos = window.scrollY + 100;
+
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.offsetHeight;
+                const sectionId = section.getAttribute('id');
+                
+                if (scrollPos >= sectionTop && scrollPos < sectionTop + sectionHeight) {
+                    document.querySelectorAll('.nav a').forEach(link => {
+                        link.style.background = '';
+                        link.style.color = '';
+                    });
+                    const activeLink = document.querySelector(`.nav a[href="#${sectionId}"]`);
+                    if (activeLink) {
+                        activeLink.style.background = 'var(--bg-secondary)';
+                        activeLink.style.color = 'var(--primary)';
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
